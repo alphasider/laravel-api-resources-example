@@ -43,7 +43,7 @@ class ParticipantController extends Controller
      */
     public function show($id)
     {
-        //
+        return Participant::find($id);
     }
 
     /**
