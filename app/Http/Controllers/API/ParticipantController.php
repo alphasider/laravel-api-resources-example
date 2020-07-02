@@ -26,7 +26,13 @@ class ParticipantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $participant = new Participant([
+            'first_name' => $request->get('first_name'),
+            'last_name' => $request->get('last_name'),
+            'email' => $request->get('email'),
+        ]);
+
+        $participant->save();
     }
 
     /**
