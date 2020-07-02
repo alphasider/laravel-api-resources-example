@@ -55,7 +55,13 @@ class ParticipantController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $participant = Participant::find($id);
+
+        $participant->first_name = $request->get('first_name');
+        $participant->last_name = $request->get('last_name');
+        $participant->email = $request->get('email');
+
+        $participant->save();
     }
 
     /**
