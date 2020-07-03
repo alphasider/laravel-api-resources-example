@@ -19,3 +19,5 @@
     });
 
     Route::apiResource('participants', 'API\ParticipantController');
+
+    Route::apiResource('events', 'API\EventController');
